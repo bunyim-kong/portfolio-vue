@@ -1,0 +1,120 @@
+/* Contact */
+.contact {
+  background: #e9a66e;
+  color: #1c2b26;
+  position: relative;
+  overflow: hidden;
+}
+.contact:after {
+  content: '✳';
+  position: absolute;
+  right: -3%;
+  bottom: -54%;
+  font-size: 560px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.13);
+  pointer-events: none;
+}
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 10%;
+  position: relative;
+  z-index: 1;
+}
+.contact .section-kicker {
+  color: #4c4b3a;
+}
+.contact .kicker-index {
+  color: #77583d;
+}
+.contact h2 {
+  font-size: clamp(51px, 6vw, 86px);
+}
+.contact h2 span {
+  font:
+    italic 400 1.05em/1.1 Georgia,
+    serif;
+  letter-spacing: -0.07em;
+}
+.contact p {
+  margin: 24px 0 31px;
+  color: #4a4e3e;
+  line-height: 1.7;
+  font-size: 15px;
+}
+.button-dark {
+  background: #172c27;
+  color: #fff;
+  min-width: 236px;
+}
+.button-dark:hover {
+  background: #334c42;
+}
+.contact-side {
+  align-self: end;
+  padding-bottom: 7px;
+}
+.contact-side > span {
+  display: block;
+  color: #5b5b45;
+  margin-bottom: 17px;
+}
+.contact-side > a {
+  font:
+    700 clamp(19px, 2vw, 27px)/1.3 'Manrope',
+    sans-serif;
+  letter-spacing: -0.05em;
+  border-bottom: 1px solid #334036;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 14px;
+}
+.contact-side > a span {
+  font-size: 22px;
+  font-weight: 400;
+}
+.contact-social {
+  display: flex;
+  gap: 28px;
+  margin-top: 26px;
+}
+.contact-social a {
+  font-size: 12px;
+  font-weight: 700;
+}
+.contact-social a:hover {
+  text-decoration: underline;
+}
+.footer {
+  background: #14201f;
+  color: #92a49a;
+  padding: 29px 0;
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+.footer-brand {
+  color: #f1f2e9;
+}
+.footer-brand span {
+  font-size: 11px;
+  vertical-align: top;
+  margin-left: 3px;
+}
+.footer p {
+  font-size: 11px;
+  margin: 0;
+}
+.footer a:not(.footer-brand) {
+  font-size: 11px;
+  font-weight: 700;
+  margin-left: auto;
+  color: #dbe4d8;
+}
+.footer-inner > span {
+  font-size: 11px;
+}

@@ -1,0 +1,26 @@
+# Dependencies and generated output
+node_modules/
+dist/
+dist-ssr/
+coverage/
+
+# Local environment files and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Debug logs
+*.log
+*.log.*
+
+# Local editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local workspace tool data
+/.agents/
+/.aws/
+/.codex/
