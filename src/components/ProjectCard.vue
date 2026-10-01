@@ -1,78 +1,68 @@
 <script setup>
-defineProps({
-  project: { type: Object, required: true },
-})
+defineProps({ project: { type: Object, required: true } })
 </script>
 
 <template>
-  <article class="project-card">
-    <div :class="['project-visual', `project-${project.visual}`]">
-      <div v-if="project.visual === 'samai'" class="samai-preview">
-        <img
-          src="/images/samai-map.png"
-          alt="Screenshot of the Samai Rum Map interface"
-          loading="lazy"
-        />
-      </div>
-      <div
-        v-else-if="project.visual === 'nexora'"
-        class="nexora-preview"
-        aria-label="Stylized preview of a technology storefront"
+  <article class="work-entry">
+    <a
+      :href="project.url || project.repo"
+      target="_blank"
+      rel="noopener noreferrer"
+      :class="['work-preview', `preview-${project.visual}`]"
+      :aria-label="`${project.url ? 'Visit' : 'View source for'} ${project.name} (opens in a new tab)`"
+    >
+      <img :src="project.image" :alt="project.imageAlt" loading="lazy" width="800" height="500" />
+      <span class="preview-caption"
+        >{{ project.url ? 'Explore website' : 'Explore project' }}
+        <span aria-hidden="true">↗</span></span
       >
-        <div class="mock-top">
-          <b>NEXORA<span>®</span></b
-          ><span>Products &nbsp;&nbsp; Collections &nbsp;&nbsp; About</span><span>☰</span>
-        </div>
-        <div class="mock-copy">
-          <small>THE FUTURE, IN FOCUS</small><strong>Technology,<br /><em>considered.</em></strong
-          ><span>EXPLORE THE COLLECTION ↗</span>
-        </div>
-        <div class="mock-product">
-          <div class="product-orb"></div>
-          <div class="product-base"></div>
-        </div>
+    </a>
+    <div class="work-details">
+      <div class="work-meta">
+        <span>{{ project.number }} / {{ project.type }}</span
+        ><span v-if="project.url" class="work-live"><i></i>Live</span>
       </div>
-      <div
-        v-else
-        class="locker-preview"
-        aria-label="Stylized preview of a locker management dashboard"
-      >
-        <div class="locker-sidebar">
-          <div class="locker-brand">◈ <span>lockr.</span></div>
-          <span>Overview</span><span>Locations</span><span>Lockers</span><span>Usage</span>
-        </div>
-        <div class="locker-dash">
-          <div class="dash-top"><small>OVERVIEW</small><span>◯ &nbsp; Admin</span></div>
-          <h3>Good morning, Bunyim.</h3>
-          <p>Here’s what’s happening with your lockers.</p>
-          <div class="dash-stats">
-            <div><small>TOTAL LOCKERS</small><b>128</b><span>Across all locations</span></div>
-            <div><small>AVAILABLE</small><b>96</b><span>Ready to use</span></div>
-            <div><small>IN USE</small><b>32</b><span>Currently active</span></div>
-          </div>
-          <div class="dash-chart">
-            <span></span><span></span><span></span><span></span><span></span><span></span
-            ><span></span><span></span><span></span><span></span>
-          </div>
-        </div>
-      </div>
-      <span v-if="project.visual !== 'samai'" class="mockup-label">Visual mockup</span>
-    </div>
-    <div class="project-info">
-      <div class="project-topline">
-        <span>PROJECT {{ project.number }}</span
-        ><span>{{ project.category }}</span>
-      </div>
-      <div>
-        <p class="project-type">{{ project.type }}</p>
-        <h3>{{ project.name }}</h3>
-        <p class="project-description">{{ project.description }}</p>
-      </div>
-      <div class="project-footer">
-        <div class="project-tags">
-          <span v-for="tag in project.tags" :key="tag">{{ tag }}</span>
-        </div>
-        <span class="project-arrow" aria-hidden="true">↗</span>
+      <h3>
+        <a :href="project.url || project.repo" target="_blank" rel="noopener noreferrer">{{
+          project.name
+        }}</a>
+      </h3>
+      <p class="work-description">{{ project.description }}</p>
+      <ul class="work-stack" aria-label="Technologies used">
+        <li v-for="tag in project.tags" :key="tag">{{ tag }}</li>
+      </ul>
+      <div class="work-actions">
+        <a
+          v-if="project.url"
+          class="work-visit"
+          :href="project.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          :aria-label="`Visit ${project.name} live website`"
+          >Visit website <span aria-hidden="true">↗</span></a
+        >
+        <a
+          class="work-source"
+          :href="project.repo"
+          target="_blank"
+          rel="noopener noreferrer"
+          :aria-label="`View ${project.name} source on GitHub`"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16" />
+          </svg>
+          Source code <span aria-hidden="true">↗</span>
+        </a>
       </div>
     </div>
   </article>

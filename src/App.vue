@@ -15,8 +15,8 @@ import ContactSection from './components/ContactSection.vue'
     <SiteHeader />
     <main id="main">
       <HeroSection />
-      <AboutSection />
       <WorkSection />
+      <AboutSection />
       <ExperienceSection />
       <SkillsSection />
       <ContactSection />

@@ -2,33 +2,32 @@
   <section id="about" class="about section-pad">
     <div class="container about-grid">
       <div class="section-intro">
-        <div class="section-kicker"><span class="kicker-index">01 /</span> ABOUT ME</div>
-        <h2>Curious by nature.<br /><span>Hands-on by choice.</span></h2>
+        <div class="section-kicker"><span class="kicker-index">02 /</span> A LITTLE ABOUT ME</div>
+        <h2>Curious mind.<br /><span>Practical maker.</span></h2>
+        <div class="about-signature">Bunyim<span>↗</span></div>
       </div>
       <div class="about-main">
-        <p class="about-lead">
-          I’m a full stack developer who enjoys turning complex problems into clear, usable web
-          experiences.
+        <p class="about-lead">I enjoy making complex things feel simple.</p>
+        <p>
+          I’m a full stack developer based in Phnom Penh, studying Web and Mobile Application
+          Development at PSE Institute. I work across interface design, frontend development, and
+          the databases and systems behind them.
         </p>
         <p>
-          My background in Web and Mobile Application Development at PSE Institute has taken me from
-          interface design to database driven applications. I’ve worked on e-commerce and portfolio
-          websites, a product map for Samai Distillery, and a client onboarding dashboard during my
-          Global Markets internship at Natixis.
+          My work spans tourism and business websites, an interactive product map for Samai
+          Distillery, and a client onboarding dashboard during my Global Markets internship at
+          Natixis.
         </p>
         <p>
-          I care about the details people see and the systems they don’t. Good collaboration, steady
-          learning, and practical solutions shape the way I work.
+          I like thoughtful details, useful feedback, and learning something new with every project.
         </p>
         <a class="inline-link" href="/Kong-Bunyim-CV.pdf" download
-          >Read my full CV <span aria-hidden="true">↗</span></a
+          >More about my background <span aria-hidden="true">↓</span></a
         >
-      </div>
-      <div class="about-aside">
-        <div class="aside-topline">AT A GLANCE</div>
-        <div><strong>10+</strong><span>projects across web experiences</span></div>
-        <div><strong>03</strong><span>years of experience</span></div>
-        <div><strong>KH / EN</strong><span>Khmer native · English intermediate</span></div>
+        <div class="about-facts">
+          <div><span>BASED IN</span><strong>Phnom Penh, Cambodia</strong></div>
+          <div><span>LANGUAGES</span><strong>Khmer · English</strong></div>
+        </div>
       </div>
     </div>
   </section>

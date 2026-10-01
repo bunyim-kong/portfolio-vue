@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#14201f" />
+    <meta name="theme-color" content="#f7f6f2" />
     <meta
       name="description"
       content="Kong Bunyim is a full stack developer in Phnom Penh building thoughtful web experiences with Vue, Laravel, and more."
@@ -21,6 +21,18 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script>
+      ;(() => {
+        let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        try {
+          const saved = localStorage.getItem('portfolio-theme')
+          if (saved === 'light' || saved === 'dark') theme = saved
+        } catch {}
+        document.documentElement.dataset.theme = theme
+        document.querySelector('meta[name="theme-color"]').content =
+          theme === 'dark' ? '#171918' : '#f7f6f2'
+      })()
+    </script>
     <title>Kong Bunyim — Full Stack Developer</title>
   </head>
   <body>
