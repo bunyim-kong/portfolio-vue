@@ -23,11 +23,11 @@
           <div class="timeline-date">JUL 2025</div>
           <div class="timeline-content">
             <span class="timeline-kind">DEVELOPMENT</span>
-            <h3>Full Stack Developer</h3>
+            <h3>Full-Stack Developer</h3>
             <p class="timeline-place">Samai Distillery</p>
             <p>
-              Developed a full stack web application, an interactive product location map, and an
-              admin dashboard with responsive, database connected features.
+              Developed a full-stack web application with an interactive product location map and a
+              responsive admin dashboard connected to a database.
             </p>
           </div>
         </article>

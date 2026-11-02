@@ -1,6 +1,5 @@
 <script setup>
-import { computed, ref } from 'vue'
-import { projects, projectFilters } from '../data/portfolio'
+import { projects } from '../data/portfolio'
 import ProjectCard from './ProjectCard.vue'
 const activeFilter = ref(projectFilters[0])
 const visibleProjects = computed(() =>
@@ -38,7 +37,7 @@ const visibleProjects = computed(() =>
         >
       </div>
       <div class="project-list">
-        <ProjectCard v-for="project in visibleProjects" :key="project.number" :project="project" />
+        <ProjectCard v-for="project in projects" :key="project.name" :project="project" />
       </div>
       <a
         class="all-work-link"

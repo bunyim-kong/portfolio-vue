@@ -129,14 +129,11 @@
   .about-aside > div:not(:first-child) {
     border-bottom: 1px solid #d8ddd4;
   }
-  .project-card {
+  .project-list {
     grid-template-columns: 1fr;
   }
-  .project-visual {
-    min-height: 390px;
-  }
   .project-info {
-    min-height: 305px;
+    min-height: 330px;
   }
   .experience-grid {
     grid-template-columns: 1fr;
@@ -262,80 +259,36 @@
   .about-aside strong {
     font-size: 28px;
   }
-  .filters {
-    gap: 6px;
-  }
-  .filter-button {
-    font-size: 10px;
-    padding: 9px 12px;
-  }
-  .project-visual {
-    min-height: 285px;
-  }
-  .samai-preview {
-    width: 85%;
-    border-width: 5px;
-  }
   .project-info {
-    padding: 24px;
-    min-height: 290px;
+    padding: 22px;
+    min-height: 0;
   }
   .project-topline {
-    font-size: 9px;
+    gap: 10px;
+    font-size: 8px;
   }
   .project-info h3 {
     font-size: 30px;
   }
   .project-description {
-    font-size: 12px;
+    font-size: 14px;
   }
   .project-tags span {
     font-size: 9px;
   }
-  .nexora-preview,
-  .locker-preview {
-    width: 88%;
-    height: 76%;
+  .project-copy {
+    padding: 31px 0 26px;
   }
-  .mock-top > span:nth-child(2) {
-    display: none;
+  .project-actions {
+    grid-template-columns: 1fr;
   }
-  .mock-copy strong {
-    font-size: 26px;
+  .project-status {
+    left: 13px;
+    bottom: 13px;
   }
-  .locker-dash {
-    padding: 14px 11px;
-  }
-  .locker-dash h3 {
-    font-size: 12px;
-    margin-top: 20px;
-  }
-  .locker-sidebar {
-    min-width: 75px;
-    width: 26%;
-    font-size: 6px;
-    padding: 13px 7px;
-  }
-  .locker-brand {
-    font-size: 11px;
-  }
-  .locker-brand span {
-    font-size: 10px;
-  }
-  .dash-stats {
-    gap: 4px;
-  }
-  .dash-stats div {
-    padding: 6px;
-  }
-  .dash-stats small {
-    font-size: 4px;
-  }
-  .dash-stats b {
-    font-size: 14px;
-  }
-  .dash-stats span {
-    display: none;
+  .all-work-link {
+    margin-left: 0;
+    gap: 20px;
   }
   .timeline-item {
     grid-template-columns: 1fr;
